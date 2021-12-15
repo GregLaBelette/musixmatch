@@ -1,4 +1,7 @@
 <h1 class='mb-4'><%= @song.title %></h1>
+<div class="d-flex w-100 justify-content-end">
+  <%= link_to 'Delete song', song_path(@song), method: 'delete', class:'btn btn-warning text-white' %>
+</div>
 <hr>
 <% @song.lyrics.split("\n\n").each do |paragraph| %>
   <p>
@@ -8,6 +11,6 @@
   </p>
 <% end %>
 <hr>
-<div class="d-flex w-100 justify-content-end">
+<div class="d-flex w-100 justify-content-end mb-5">
   <%= link_to 'Back to songs', songs_path, class:'btn btn-warning text-white' %>
 </div>

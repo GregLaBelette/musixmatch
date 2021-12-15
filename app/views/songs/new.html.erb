@@ -1,6 +1,10 @@
 <h1>Create new song</h1>
 <hr class='mb-4'>
 
-<%= simple_form_for @song do %>
-
+<%= simple_form_for @song do |f| %>
+  <%= f.input :artist %>
+  <%= f.input :title %>
+  <div class="d-flex w-100 justify-content-end">
+    <%= f.submit 'Go', class: 'btn btn-warning text-white' %>
+  </div>
 <% end %>
