@@ -1,9 +1,20 @@
-<h1 class="mb-4">My songs</h1>
+<h1>My songs</h1>
+<hr class='mb-4'>
 
 <ul>
   <% @songs.each do |song| %>
-    <%= link_to song_path(song) do %>
-      <li><%= song.title %> by <strong><%= song.artist %></strong></li>
-    <% end %>
+    <li>
+      <%= link_to song_path(song) do %>
+        <%= song.title %>
+      <% end %>
+      <span> by </span>
+      <%= link_to artist_path(song.artist) do %>
+        <%= song.artist.name %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
+
+<div class="d-flex w-100 justify-content-end">
+  <%= link_to 'New song', new_song_path, class: 'btn btn-warning text-white' %>
+</div>

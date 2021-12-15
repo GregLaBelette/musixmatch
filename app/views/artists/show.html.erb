@@ -1,5 +1,15 @@
-<h1 class='mb-4'><%= @artist.name %></h1>
+<h1 class=><%= @artist.name %></h1>
+<hr class='mb-4'>
+<h5>Songs :</h5>
+
+<ul>
+  <% @artist.songs.each do |song| %>
+      <%= link_to song_path(song) do %>
+      <li><%= song.title %></li>
+      <% end %>
+  <% end %>
+</ul>
 
 <div class="d-flex w-100 justify-content-end">
-  <%= link_to 'back to artists', artists_path, class:'btn btn-primary text-white' %>
+  <%= link_to 'back to artists', artists_path, class:'btn btn-warning text-white' %>
 </div>

@@ -1,0 +1,13 @@
+<h1 class='mb-4'><%= @song.title %></h1>
+<hr>
+<% @song.lyrics.split("\n\n").each do |paragraph| %>
+  <p>
+    <% paragraph.split("\n").each do |line| %>
+      <p class='mb-0'><%= line %></p>
+    <% end %>
+  </p>
+<% end %>
+<hr>
+<div class="d-flex w-100 justify-content-end">
+  <%= link_to 'Back to songs', songs_path, class:'btn btn-warning text-white' %>
+</div>

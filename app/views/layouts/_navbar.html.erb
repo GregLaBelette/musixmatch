@@ -19,7 +19,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%# dropdown items %>
             <% if user_signed_in? %>
-              <li><%= link_to 'My songs', root_path, class:'dropdown-item' %></li>
+              <li><%= link_to 'My songs', songs_path, class:'dropdown-item' %></li>
               <li><%= link_to 'My artists', artists_path, class:'dropdown-item' %></li>
               <li><%= link_to 'Update account', edit_user_registration_path, class:'dropdown-item' %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE', class:'dropdown-item' %></li>

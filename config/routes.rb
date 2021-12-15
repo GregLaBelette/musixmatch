@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :artists, only: %i[index show]
-  resources :songs, only: %i[index show create]
+  resources :songs, only: %i[index show new create]
 end
