@@ -1,3 +1,6 @@
+@import "config/bootstrap_variables";
+
 @import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "components/index";
-@import "_variables";
